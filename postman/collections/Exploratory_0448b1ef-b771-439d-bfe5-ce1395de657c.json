@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "e336eafc-19c7-4dca-8053-3f000c98e0a4",
+		"name": "Exploratory",
+		"description": "Simple API to demo the API Builder in Postman\n\nContact Support:\n Name: Arlemi Turpault\n Email: arlemi@postman.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "videos",
+			"item": [
+				{
+					"name": "List all videos",
+					"id": "6663b649-c2a3-415d-905a-7dc0fec3b4c2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/videos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"videos"
+							]
+						},
+						"description": "Returns a list of all the Exploratory videos"
+					},
+					"response": [
+						{
+							"id": "f2da089b-6611-4a7e-85d2-b47640c42ce6",
+							"name": "List of videos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"name\": \"Public Workspaces\",\n    \"url\": \"https://www.youtube.com/watch?v=DjGbMdqnY64\",\n    \"views\": 301\n  },\n  {\n    \"name\": \"Public Workspaces\",\n    \"url\": \"https://www.youtube.com/watch?v=DjGbMdqnY64\",\n    \"views\": 301\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Fetch one video by ID",
+					"id": "491c172e-5b42-4a12-80b0-74ddbe4f8e3e",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/videos/:videoId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"videos",
+								":videoId"
+							],
+							"variable": [
+								{
+									"id": "f7f32422-ff88-4942-b4b1-c8d42517be15",
+									"key": "videoId",
+									"value": "4",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Get a single video"
+					},
+					"response": [
+						{
+							"id": "6625fae9-7fd4-47ab-a119-a67884e3d943",
+							"name": "List of videos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos/:videoId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos",
+										":videoId"
+									],
+									"variable": [
+										{
+											"key": "videoId",
+											"value": "4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"name\": \"Public Workspaces\",\n  \"url\": \"https://www.youtube.com/watch?v=DjGbMdqnY64\",\n  \"views\": 301\n}"
+						}
+					]
+				}
+			],
+			"id": "ba62aee9-7a53-4747-9659-8fbf7a3b3368"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c146ea55-91f2-4834-bc08-6e7bacbdd6a7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "928a80eb-0473-4807-a7e1-d3d7150ab7e8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ffe6acef-282b-4fd1-aa97-9b9469200b29",
+			"key": "baseUrl",
+			"value": "https://4e03cc44-1f26-4239-81da-f6f342a97941.mock.pstmn.io",
+			"type": "string"
+		}
+	]
+}
